@@ -198,7 +198,7 @@ print(lista10.index(5))  # vai retornar o indice do primeiro elemento encontrado
 # O indice por ser usado referencia de busca, se não encontrar retornará erro
 print(lista10.index(5, 2))  # busca o indice de 5 a partir da posição 2
 
-print(lista10.index(5, 2, 6))  # busca o indice de 5 entrer um intervalo
+print(lista10.index(5, 2, 6))  # busca o indice de 5 entre um intervalo
 
 # Revisao slicing
 
