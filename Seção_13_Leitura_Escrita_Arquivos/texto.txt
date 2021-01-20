@@ -1,0 +1,20 @@
+Curso de programação em Python Essencial da Geek University.
+
+Definir a precisão e a credibilidade em um texto são tópicos bem estudados em disciplinas de psicologia e jornalismo.
+A proliferação de dados de mídia social em grande escala e seu uso crescente como fonte primária de notícias,
+no entanto, está forçando um reexame dessas questões. As abordagens anteriores que contavam com profissionais treinados
+jornalisticamente para filtrar o conteúdo de baixa qualidade não são mais aplicáveis, dado o crescente volume da mídia
+social que sobrecarregou nossa capacidade de controlar a qualidade manualmente.
+
+O uso de notícias falsas como mecanismo de desinformação vem se mostrando um elemento desestabilizador do estado
+democrático, mostrando-se capaz de alterar a forma como as pessoas interpretam a realidade.
+
+Atualmente já existem diversas iniciativas que exploram os aspectos linguísticos das notícias com o uso de redes
+neurais, para identificar notícias falsas. Outro tipo de análise explorada procura analisar a reação dos leitores a
+determinados tipos de conteúdo, com base em suas características e relacionamentos nas mídias sociais.
+
+Por fim, uma terceira abordagem busca identificar através da forma de disseminação se uma notícia é falsa ou não.
+Este projeto pretende analisar se a convergência entre a linguística de notícias classificadas como verdadeiras ou
+falsas, a maneira como os usuários reagiram a essas mensagens e a forma como elas se propagaram pelas mídias sociais,
+através da aplicação de algoritmos de aprendizado de máquina e redes neurais é capaz de criar mecanismos capazes de
+detectar esse tipo de notícia automaticamente com maior precisão e robustez.
