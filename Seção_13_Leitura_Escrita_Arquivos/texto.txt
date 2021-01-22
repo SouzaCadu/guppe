@@ -1,4 +1,4 @@
-Curso de programação em Python Essencial da Geek University.
+Nova linha introdutória. Python Essencial da Geek University.
 
 Definir a precisão e a credibilidade em um texto são tópicos bem estudados em disciplinas de psicologia e jornalismo.
 A proliferação de dados de mídia social em grande escala e seu uso crescente como fonte primária de notícias,
