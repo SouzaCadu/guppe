@@ -58,9 +58,33 @@ print(os.path.isabs("/Users/cadu/PycharmProjects"))
 #  Checando o sistema operacional
 print(f"{os.name} \n{os.uname()}")
 
-"""
-
-import os
 
 print(os.getcwd())
 
+os.rmdir(os.path.join(os.getcwd(), "teste"))
+
+os.mkdir(os.path.join(os.getcwd(), "teste"))
+
+os.chdir(os.path.join(os.getcwd(), "teste"))
+
+print(os.getcwd())
+
+os.chdir("..")
+
+print(os.getcwd())
+
+print(f"{os.listdir()}", f"\n{len(os.listdir())}")
+
+with os.scandir() as arquivos:
+    relacao_arquivos = list(arquivos)
+    print(relacao_arquivos)
+    print(dir(relacao_arquivos[0]))
+    print(relacao_arquivos[0].inode())  #
+    print(relacao_arquivos[0].is_dir())  # É um diretório? False
+    print(relacao_arquivos[0].is_file())  # É um arquivo? True
+    print(relacao_arquivos[0].is_symlink())  # É um link simbólico
+    print(relacao_arquivos[0].name)  # Nome do arquivo
+    print(relacao_arquivos[0].path)  # Caminho até o arquivo
+    print(relacao_arquivos[0].stat())  # Estatísiticas do arqu
+
+"""
