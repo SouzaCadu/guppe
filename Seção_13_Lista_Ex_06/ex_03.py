@@ -20,7 +20,6 @@ path = str(input("Informe o caminho do arquivo para saber quantas vogais o arqui
 try:
     with open(path, "r") as arquivo:
         texto = arquivo.readlines()
-        linhas = len(texto)
         total_vogais = 0
         for frase in texto:
             qtde_vogais = vogais(frase)

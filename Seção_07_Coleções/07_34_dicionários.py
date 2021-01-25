@@ -25,7 +25,7 @@ print(type(countries))
 # Acessando elementos, dicionários não são indexados
 
 # Via chave, deve fazer parte do dicionário
-print(paises["br"], paises["py"])
+print(countries["br"], countries["py"])
 
 # Via get - forma recomendada - se não fizer do dicionário retorna "None"
 # facilita o tratamento de erro, pois retorna um tipo de dados que é o "None"

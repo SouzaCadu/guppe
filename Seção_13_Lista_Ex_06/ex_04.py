@@ -3,7 +3,6 @@
    e quantas são consoantes
 """
 
-
 import re
 from collections import Counter
 
@@ -31,7 +30,6 @@ path = str(input("Informe o caminho do arquivo para saber quantas vogais e conso
 try:
     with open(path, "r") as arquivo:
         texto = arquivo.readlines()
-        linhas = len(texto)
         total_vogais = 0
         total_consoantes = 0
         for frase in texto:
