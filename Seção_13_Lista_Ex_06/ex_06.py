@@ -19,5 +19,3 @@ try:
         print(f"Em {path} há a seguinte distribuição de caractere {total_caracteres}.")
 except FileNotFoundError:
     print("\nArquivo informado não encontrado!")
-
-
