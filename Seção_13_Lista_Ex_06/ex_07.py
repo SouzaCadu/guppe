@@ -29,4 +29,3 @@ try:
     print(f"\nTexto alterado com sucesso em {path2}/{ nome_aux} !")
 except FileNotFoundError:
     print("\nArquivo informado não encontrado!")
-

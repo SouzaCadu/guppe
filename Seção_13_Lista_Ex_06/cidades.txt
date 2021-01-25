@@ -1,0 +1,5 @@
+Osasco                                  500000
+Barueri                                 120000
+Santos                                  80000
+Guarulhos                               750000
+Angatuba                                30000
