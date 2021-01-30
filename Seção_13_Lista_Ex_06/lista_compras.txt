@@ -1,0 +1,4 @@
+Produto1: 14.99
+Produto2: 134.50
+Produto3: 205.00
+Produto4: 19.99
