@@ -1,4 +1,3 @@
-
 """
 27) Faça um programa para gerenciar as notas dos alunos de uma turma salva em um arquivo. O programa deverá ter um menu
     contendo as seguinte opções:
@@ -10,5 +9,5 @@
     (f) Salvar dados em Disco;
     (g) Sair do programa (fim)
     Faça a rotina que gerencia o menu dentro do main, e para cada uma das opções deste menu, crie uma função específica
-# OBS: Não irá ser necessário criar a função/opção para salvar os dados em disco, pois será salvo automaticamente.
+# OBS: Não será necessário criar a função/opção para salvar os dados em disco, pois será salvo automaticamente.
 """
