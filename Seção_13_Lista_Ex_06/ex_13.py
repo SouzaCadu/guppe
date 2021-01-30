@@ -19,13 +19,14 @@ try:
             telefone = str(input("Digite um número de telefone: ")).strip()
             print()
             if valida_telefone(telefone):
+                pass
+            else:
                 with open(novo_arquivo, "a", encoding="utf-8") as arquivo:
                     if telefone != '0':
                         informacoes = nome + ";" + telefone
                         arquivo.write(informacoes+"\n")
                     else:
                         break
-            else:
                 print("Telefone inválido!\n")
         else:
             print("\nNome inválido!\n")
