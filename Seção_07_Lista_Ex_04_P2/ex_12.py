@@ -18,4 +18,4 @@ print(matriz)
 
 n = len(matriz)
 transpose = [[row[i] for row in matriz] for i in range(n)]
-print (transpose)
+print(transpose)
