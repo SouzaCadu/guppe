@@ -1,0 +1,9 @@
+"This book introduces the main
+ theoretical findings related 
+to copulas and shows how stati
+stical modeling of \n multivar
+iate continuous distributions 
+using copulas can be carried o
+ut in the R statistical enviro
+nment with the \n package copu
+la (among others). \n"
