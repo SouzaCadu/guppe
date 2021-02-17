@@ -3,7 +3,8 @@ import os
 
 def cria_lista_ex(qtde_ex):
     for i in range(1, qtde_ex + 1):
-        print(i)
+        if i <= 9:
+            i = "0" + str(i)
         arquivo = os.path.join(os.getcwd(), "ex" + "_" + str(i) + ".py")
         print(arquivo)
         try:
