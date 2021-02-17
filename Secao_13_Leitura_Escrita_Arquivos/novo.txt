@@ -1,0 +1,4 @@
+Podemos escrever qualquer conteúdo em um arquivo.
+Quando usamos a função write, o arquivo é criado automaticamente, caso não exista.
+Passaremos algumas linhas de texto.
+Para testar a função, usaremos sempre strings, pois do contrário teremos um erro.
