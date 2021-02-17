@@ -11,9 +11,17 @@ Salienta-se que a área de um quadrado é obtida pela fórmula (lado * lado) e o
 class Quadrado:
 
     def __init__(self, lado):
-        self.__lado = float(lado)
-        self.__area = 0.0
-        self.__perimetero = 0.0
+        try:
+            if float(lado) >= 0:
+                self.__lado = float(lado)
+                self.__area = 0.0
+                self.__perimetero = 0.0
+            else:
+                raise ValueError
+        except ValueError:
+            print("\nValores inválidos")
+            exit(1)
+
 
     @property
     def lado(self):
@@ -28,9 +36,16 @@ class Quadrado:
         return self.__perimetero
 
     def set_lado(self, novo_lado):
-        self.__lado = float(novo_lado)
-        self.__area = 0.0
-        self.__perimetero = 0.0
+        try:
+            if float(novo_lado) >= 0:
+                self.__lado = float(novo_lado)
+                self.__area = 0.0
+                self.__perimetero = 0.0
+            else:
+                raise ValueError
+        except ValueError:
+            print("\nValores inválidos")
+            exit(1)
 
     def calcular_area(self):
         self.__area = self.__lado ** 2
