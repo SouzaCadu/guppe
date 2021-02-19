@@ -86,7 +86,7 @@ class Televisor:
                     if int(novo_canal) > 0:
                         self.__canal = int(novo_canal)
                     else:
-                        print("\nCanal inválido")
+                        print("\nCanal inválido.")
                 else:
                     raise ValueError
             else:
@@ -99,10 +99,11 @@ class Televisor:
         try:
             if self.__ligado:
                 if int(novo_volume) != bool:
-                    if (int(novo_volume) >= 0) and (int(novo_volume) <= 100):
-                        self.__volume = int(novo_volume)
-                    else:
-                        print("\nVolume inválido")
+                    if int(novo_volume) >= 0:
+                        if int(novo_volume) <= 100:
+                            self.__volume = int(novo_volume)
+                        else:
+                            print("\nVolume inválido")
                 else:
                     raise ValueError
             else:

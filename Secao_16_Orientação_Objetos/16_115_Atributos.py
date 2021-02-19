@@ -23,7 +23,6 @@ class Lampada:
         self.cor = cor
         self.ligado = False
 
-
 class ContaCorrente:
     def __init__(self, numero, limite, saldo):
         self.numero = numero
@@ -137,8 +136,4 @@ print(p1.__dict__, p2.__dict__)
 del p2.peso
 print(p1.__dict__, p2.__dict__)
 
-
-
-
 """
-

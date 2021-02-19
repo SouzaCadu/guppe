@@ -195,7 +195,4 @@ print(user1.nome_completo(), Usuario.nome_completo(user2))
 print("-"*20)
 print(user2.contador, user1.definicao())
 
-
 """
-
-
