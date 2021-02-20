@@ -1,8 +1,8 @@
 """
-23) Baseando-se no exercício 22 adicione os atributos numeroCanais
-e, volumeMaximo, onde numeroCanais indica o número máximo de canais
-que o televisor pode sintonizar e volumeMaximo indica qual o maior nível
-de volume possível. O método imprimir deve ser modificado de forma a mostrar
+23) Baseando-se no exercício 22 adicione os atributos numeroCanais e volumeMaximo.
+Onde numeroCanais indica o número máximo de canais que o televisor pode sintonizar e
+volumeMaximo indica qual o maior nível de volume possível.
+O método imprimir deve ser modificado de forma a mostrar
 na tela os valores de todos os atributos.
 """
 
@@ -24,23 +24,25 @@ class Televisor3(Televisor2):
     def volume_maximo(self):
         return self.__volume_maximo
 
-    def set_vol_maximo(self, novo_valor):
-        if int(novo_valor) > 0:
-            if int(novo_valor) <= int(self.__volume_maximo):
-                self.__volume = int(novo_valor)
-            else:
-                print("Televisor já está no volume máximo.")
-
+    @numero_canais.setter
     def set_num_canal(self, novo_valor):
         if int(novo_valor) > 0:
-            if int(novo_valor) <= int(self.__numero_canais):
-                self.__canal = int(novo_valor)
-            else:
+            if int(novo_valor) == int(self.__numero_canais):
                 print("O televisor já está exibindo o número máximo de canais")
+            else:
+                self.__numero_canais = int(novo_valor)
+
+    @volume_maximo.setter
+    def set_vol_maximo(self, novo_valor):
+        if int(novo_valor) > 0:
+            if int(novo_valor) == int(self.__volume_maximo):
+                print("Televisor já está no volume máximo.")
+            else:
+                self.__volume_maximo = int(novo_valor)
 
     def imprimir(self):
         if self._Televisor2__set_ligado:
-            print(f"\nO televisor tem {self.__numero_canais} canis, o volume máximo é {self.__volume_maximo}"
+            print(f"\nO televisor tem {self.__numero_canais} canais, o volume máximo é {self.__volume_maximo}"
                   f" e está ligado no canal {self.canal} no volume {self.volume}.")
         else:
             print("\nO televisor encontra-se desligado.")
@@ -57,7 +59,12 @@ if __name__ == "__main__":
     tv3.desligar()
     tv3.imprimir()
     print("_" * 90, end="\n")
-    tv3.set_vol_maximo(510)
-    tv3.set_num_canal(110)
-
+    tv3.ligar()
+    tv3.set_vol_maximo = 50
+    tv3.set_num_canal = 110
+    tv3.imprimir()
+    print("_" * 90, end="\n")
+    tv3.set_vol_maximo = 50
+    tv3.set_num_canal = 110
+    tv3.imprimir()
 

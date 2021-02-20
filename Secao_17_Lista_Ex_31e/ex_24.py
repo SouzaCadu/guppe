@@ -12,33 +12,36 @@ from ex_23 import Televisor3
 
 
 class Televisor4(Televisor3):
-    pass
+
+    def __init__(self):
+        super().__init__(numero_canais=0, volume_maximo=0)
+
+    def canal_acima(self):
+        if self.set_canal == self.set_num_canal:
+            self.set_canal = 1
+        else:
+            self.set_canal += 1
+
+    def canal_abaixo(self):
+        if self.set_canal == 1:
+            self.set_canal = self.set_num_canal
+        else:
+            self.set_canal -= 1
 
 
-"""
 if __name__ == "__main__":
 
     tv3 = Televisor4()
-    tv3.set_ligado(True)
-    tv3.set_canal = 8
-    tv3.set_volume = 15
-    tv3.set_qtde_canais = 10
-    tv3.set_vol_maximo = 50
+    tv3.set_num_canal = 15
+    tv3.set_vol_maximo = 15
+    tv3.ligar()
+    tv3.set_canal = 10
+    tv3.set_volume = 10
     tv3.imprimir()
     print("_" * 90, end="\n")
-    tv3.canal_acima()
+    [tv3.canal_acima() for _ in range(10)]
     tv3.imprimir()
     print("_" * 90, end="\n")
-    tv3.canal_acima()
+    [tv3.canal_abaixo() for _ in range(10)]
     tv3.imprimir()
     print("_" * 90, end="\n")
-    tv3.canal_acima()
-    tv3.imprimir()
-    print("_" * 90, end="\n")
-    tv3.canal_abaixo()
-    tv3.imprimir()
-    print("_" * 90, end="\n")
-    tv3.set_ligado(False)
-    tv3.imprimir()
-"""
-

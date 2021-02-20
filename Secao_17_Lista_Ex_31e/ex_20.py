@@ -27,8 +27,9 @@ class Televisor:
         return self.__ligado
 
     @canal.setter
-    def set_canal(self, novo_valor):
-        self.__canal = novo_valor
+    def set_canal(self, novo_canal):
+        if int(novo_canal) > 0:
+            self.__canal = int(novo_canal)
 
     @volume.setter
     def set_volume(self, novo_valor):
