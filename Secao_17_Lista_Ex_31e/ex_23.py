@@ -28,7 +28,7 @@ class Televisor3(Televisor2):
     def set_num_canal(self, novo_valor):
         if int(novo_valor) > 0:
             if int(novo_valor) == int(self.__numero_canais):
-                print("O televisor já está exibindo o número máximo de canais")
+                print("O televisor já está exibindo o máximo de canais")
             else:
                 self.__numero_canais = int(novo_valor)
 
@@ -36,7 +36,7 @@ class Televisor3(Televisor2):
     def set_vol_maximo(self, novo_valor):
         if int(novo_valor) > 0:
             if int(novo_valor) == int(self.__volume_maximo):
-                print("Televisor já está no volume máximo.")
+                print("O televisor já está no volume máximo.")
             else:
                 self.__volume_maximo = int(novo_valor)
 
