@@ -15,6 +15,7 @@ from passlib.hash import pbkdf2_sha256 as cryp
 
 
 class Lampada:
+
     def __init__(self, voltagem, cor, luminosidade):
         self.__voltagem = voltagem  # self. é o objeto que está executando o método
         self.__cor = cor
@@ -55,6 +56,7 @@ print(p1.desconto(10), p2.desconto(15))
 
 
 class Usuario:
+
     def __init__(self, nome, sobrenome, email, senha):
         self.__nome = nome
         self.__sobrenome = sobrenome

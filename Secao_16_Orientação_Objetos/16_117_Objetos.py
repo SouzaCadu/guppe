@@ -7,6 +7,7 @@ instâncias de uma classe como variáveis do tipo definido na classe.
 
 
 class Lampada:
+
     def __init__(self, voltagem, cor, luminosidade):
         self.__ligada = True
         self.__voltagem = voltagem  # self. é o objeto que está executando o método

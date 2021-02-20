@@ -13,7 +13,7 @@ ser acessado dentro da classe em que foi criado, do contrário ele pode ser aces
 em qualquer parte do projeto.
 Em Python ficou estabelecido que todo o atributo de uma classe é público, ou seja, pode ser acessado em todo
 o projeto, caso desejemos que um atributo seja privado devemos utilizar '__' no inicio do seu nome
-(Name Mangiling). Isso é apenas uma convenção, o Python não impede que um atributo seja acessado fora
+(Name Mangling). Isso é apenas uma convenção, o Python não impede que um atributo seja acessado fora
 da classe.  Quando são criados atributos de instância de uma classe, todas as instâncias criadas
 terão esses atributos.
 
@@ -22,6 +22,7 @@ class Lampada:
         self.voltagem = voltagem  # self. é o objeto que está executando o método
         self.cor = cor
         self.ligado = False
+
 
 class ContaCorrente:
     def __init__(self, numero, limite, saldo):
@@ -44,7 +45,7 @@ class Acesso:
 
 user = Acesso("user@gmail.com", "123456")
 print(user.mail)
-print(user._Acesso__senha)  # acesso via Name Mangiling
+print(user._Acesso__senha)  # acesso via Name Mangling
 
 user.mostra_senha()  # acesso direto e da forma correta
 user.mostra_email()  # acesso direto e da forma correta
@@ -63,6 +64,7 @@ instância da classe e seus próprios valores como é o caso dos atributos de in
 todas as instâncias terão mesmo valor para aquele atributo.
 
 class Produto:
+
     def __init__(self, nome, descricao, valor):
         self.nome = nome
         self.descricao = descricao
@@ -74,7 +76,7 @@ p2 = Produto("X-Box S", "Video Game", 4200)
 
 print(p1.valor, p2. valor)
 
-# Refatorando a classe Produto
+# Reescrevendo a classe Produto
 
 
 class Produto:

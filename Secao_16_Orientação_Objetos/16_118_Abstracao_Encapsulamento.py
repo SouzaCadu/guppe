@@ -15,11 +15,10 @@ Relembrando Atributos/Métodos privados em Python
 Imagine que temos uma classe chamada Pessoa, contendo um atributo privado chamado __nome e um método privado
 chamado __falar()
 
-Esses elementos privados só devem/deveriam ser acessados dentro da classe, mas Python não bloqueia este acesso
-fora da classe.
+Esses elementos privados só devem ser acessados dentro da classe, mas Python não bloqueia este acesso fora da classe.
 
-Com Python acontece um fenômeno chamado Name Mangling, que faz uma alteração na forma de se
-acessar os elementos privados, conforme:
+Com Python acontece um fenômeno chamado Name Mangling, que faz uma alteração na forma de se acessar
+os elementos privados, conforme:
 
 _Classe__elemento
 
@@ -71,7 +70,7 @@ class Conta:
         self.__saldo -= valor
         self.__saldo -= 10  # Taxa de transferência paga por quem realizou a transferência
 
-        # 2 - Adicionar o valor na conta de destibo
+        # 2 - Adicionar o valor na conta de destino
         conta_destino.__saldo += valor
 
 
@@ -88,7 +87,4 @@ conta2.transferir(100, conta1)
 conta1.extrato()
 conta2.extrato()
 
-
-
 """
-

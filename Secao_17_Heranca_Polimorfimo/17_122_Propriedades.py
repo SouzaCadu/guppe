@@ -11,7 +11,6 @@ getters e setters.
 
 Ainda é possível criar métodos/funções como propriedades
 
-
 # Trabalhando com getters e setters, analogo ao Java
 
 class Conta:
@@ -74,7 +73,7 @@ print(conta1.__dict__)
 conta1.set_limite(999999)
 print(conta1.__dict__)
 
-# Utilizando o método property - Refatorando a classe
+# Utilizando o método property - Reescrevendo a classe
 
 class Conta:
     contador = 0
@@ -86,33 +85,33 @@ class Conta:
         self.__limite = limite
         Conta.contador += 1
 
-    # @property por definição é do tipo get
+    # @property por definição é do tipo get, retorna o valor do atributo
     @property
     def numero(self):
         return self.__numero
 
-    # @property por definição é do tipo get
+    # @property por definição é do tipo get, retorna o valor do atributo
     @property
     def titular(self):
         return self.__titular
 
-    # @property por definição é do tipo get
+    # @property por definição é do tipo get, retorna o valor do atributo
     @property
     def saldo(self):
         return self.__saldo
 
-    # @property por definição é do tipo get
+    # @property por definição é do tipo get, retorna o valor do atributo
     @property
     def limite(self):
         return self.__limite
 
-    # @property por definição é do tipo get
+    # @property por definição é do tipo get, retorna o valor do atributo
     # podemos usar um método como propriedade
     @property
     def valor_total(self):
         return self.__saldo + self.__limite
 
-    # @property por definição é do tipo get
+    # @variável.setter por definição é do tipo set, alteram o valor do atributo
     @limite.setter
     def limite(self, novo_limite):
         self.__limite = novo_limite
@@ -148,7 +147,4 @@ print(conta1.limite)
 print(conta1.valor_total)  # valor total é uma propriedade, e não uma função, do contrário usariamos parenteses
 print(conta2.valor_total)  # valor total é uma propriedade, e não uma função, do contrário usariamos parenteses
 
-
 """
-
-

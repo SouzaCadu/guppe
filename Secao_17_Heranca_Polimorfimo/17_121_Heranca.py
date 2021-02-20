@@ -1,7 +1,7 @@
 """
-A ideia de herança é a de reaproveitar código. Também extender nossas classes.
+A ideia de herança é a de reaproveitar código. Também estender nossas classes.
 
-OBS: Com a herança, a partir de uma classe existente, nós estendemos outra classe que passa a herdar
+OBS: Com a herança, a partir de uma classe existente, nós estendemos outra classe para que passa a herdar
 atributos e métodos da classe herdada.
 
 
@@ -50,9 +50,11 @@ funcionario1 = Funcionario('Steve', 'Rogers', '987.654.321-11', 1234)
 print(cliente1.nome_completo())
 print(funcionario1.nome_completo())
 
-# Refatorando para aplicar a Herança
+# Reescrevendo para aplicar a Herança
 
 # Classe genérica
+
+
 class Pessoa:
 
     def __init__(self, nome, sobrenome, cpf):
@@ -65,6 +67,8 @@ class Pessoa:
 
 
 # Sub classe ou classe filha ou classe específica de Pessoa
+
+
 class Cliente(Pessoa):
 
     def __init__(self, nome, sobrenome, cpf, renda):
@@ -73,6 +77,8 @@ class Cliente(Pessoa):
 
 
 # Sub classe ou classe filha ou classe específica de Pessoa
+
+
 class Funcionario(Pessoa):
 
     def __init__(self, nome, sobrenome, cpf, matricula):
@@ -106,6 +112,8 @@ class Pessoa:
 
 
 # Sub classe ou classe filha ou classe específica de Pessoa
+
+
 class Cliente(Pessoa):
 
     def __init__(self, nome, sobrenome, cpf, renda):
@@ -114,6 +122,8 @@ class Cliente(Pessoa):
 
 
 # Sub classe ou classe filha ou classe específica de Pessoa
+
+
 class Funcionario(Pessoa):
 
     def __init__(self, nome, sobrenome, cpf, matricula):
@@ -132,9 +142,4 @@ print(funcionario1.nome_completo())
 
 print(cliente1.__dict__, funcionario1.__dict__)
 
-
 """
-
-
-
-

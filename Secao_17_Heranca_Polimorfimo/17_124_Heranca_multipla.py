@@ -91,7 +91,7 @@ golem = Terrestre("Golem")
 print(golem.andar())
 print(golem.cumprimentar())
 print("-" * 20)
-quagsire = Hibrido("Guagsire")
+quagsire = Hibrido("Quagsire")
 print(quagsire.andar())
 print(quagsire.nadar())
 # é executado o cumprimento aquatico, pois é a primeira classe a ser herdada
@@ -101,9 +101,9 @@ print(quagsire.cumprimentar())
 print("-" * 20)
 
 # Descobrindo as origens dos objetos:
-print(f"Guagsire é instância de Hibrido? {isinstance(quagsire, Hibrido)}")
-print(f"Guagsire é instância de Terrestre? {isinstance(quagsire, Terrestre)}")
-print(f"Guagsire é instância de Aquatico? {isinstance(quagsire, Aquatico)}")
-print(f"Guagsire é instância de Pokemon? {isinstance(quagsire, Pokemon)}")
-# em Python por padrão qualquer classe herda de object por padrão
-print(f"Guagsire é instância de object? {isinstance(quagsire, object)}")
+print(f"Quagsire é instância de Hibrido? {isinstance(quagsire, Hibrido)}")
+print(f"Quagsire é instância de Terrestre? {isinstance(quagsire, Terrestre)}")
+print(f"Quagsire é instância de Aquatico? {isinstance(quagsire, Aquatico)}")
+print(f"Quagsire é instância de Pokemon? {isinstance(quagsire, Pokemon)}")
+# em Python por padrão qualquer classe herda de object
+print(f"Quagsire é instância de object? {isinstance(quagsire, object)}")

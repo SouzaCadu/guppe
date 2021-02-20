@@ -15,65 +15,49 @@ class Televisor3(Televisor2):
         super().__init__()
         self.__numero_canais = int(numero_canais)
         self.__volume_maximo = int(volume_maximo)
-        self.set_volume = 0
-        self.set_canal = 1
 
     @property
-    def set_numero_canais(self):
+    def numero_canais(self):
         return self.__numero_canais
 
     @property
-    def set_volume_maximo(self):
+    def volume_maximo(self):
         return self.__volume_maximo
 
-    def set_canal(self, novo_canal):
-        try:
-            if self.get_ligado:
-                if int(novo_canal) > 0:
-                    if int(novo_canal) <= int(self.__numero_canais):
-                        self.set_canal = int(novo_canal)
-                    else:
-                        print(f"\nO televisor já atingiu o número máximo de canais exibidos.")
-                else:
-                    print("\nO televisor está desligado.")
-        except ValueError:
-            print("\nValor inválido.")
-            exit(1)
+    def set_vol_maximo(self, novo_valor):
+        if int(novo_valor) > 0:
+            if int(novo_valor) <= int(self.__volume_maximo):
+                self.__volume = int(novo_valor)
+            else:
+                print("Televisor já está no volume máximo.")
 
-    def set_volume(self, novo_volume):
-        try:
-            if self.get_ligado:
-                if int(novo_volume) >= 0:
-                    if int(novo_volume) <= int(self.__volume_maximo):
-                        self.set_volume = int(novo_volume)
-                    else:
-                        print("\nO televisor já está no volume máximo.")
-                else:
-                    print("\nO televisor está desligado.")
-        except ValueError:
-            print("\nValor inválido.")
-            exit(1)
+    def set_num_canal(self, novo_valor):
+        if int(novo_valor) > 0:
+            if int(novo_valor) <= int(self.__numero_canais):
+                self.__canal = int(novo_valor)
+            else:
+                print("O televisor já está exibindo o número máximo de canais")
 
     def imprimir(self):
-        print(f"\nO televisor está {'ligado' if self.get_ligado else 'desligado'} "
-              f"tem {self.__numero_canais} canais e {self.__volume_maximo} é o volume máximo ")
-        if self.get_ligado:
-            print(f"e está no canal {self.set_canal} e está no volume {self.set_volume}.")
+        if self._Televisor2__set_ligado:
+            print(f"\nO televisor tem {self.__numero_canais} canis, o volume máximo é {self.__volume_maximo}"
+                  f" e está ligado no canal {self.canal} no volume {self.volume}.")
         else:
-            pass
+            print("\nO televisor encontra-se desligado.")
 
 
 if __name__ == "__main__":
 
-    tv3 = Televisor3(0, 0)
-    tv3.set_ligado(True)
+    tv3 = Televisor3(10, 35)
     tv3.set_canal = 8
     tv3.set_volume = 32
+    tv3.ligar()
     tv3.imprimir()
     print("_" * 90, end="\n")
-    tv3.set_canal = 11
-    tv3.set_volume = 51
+    tv3.desligar()
     tv3.imprimir()
     print("_" * 90, end="\n")
-    tv3.set_ligado(False)
-    tv3.imprimir()
+    tv3.set_vol_maximo(510)
+    tv3.set_num_canal(110)
+
+

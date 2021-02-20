@@ -23,6 +23,5 @@ class Gato(Animal):
 geromel = Gato("Geromel", "Felino", "Maine Coon")
 geromel.emite_som("miado")
 
+
 """
-
-

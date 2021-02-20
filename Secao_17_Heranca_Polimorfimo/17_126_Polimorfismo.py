@@ -2,7 +2,7 @@
 Polimorfismo (objetos que podem possuir muitas formas ou se comportar de formas diferentes)
 
 Quando implementamos novamente um método presente na classe pai em uma subclasse, sobre escrevemos esse
-métodos e isso representa o polimorfismo dos objetos em Python.
+método e isso representa o polimorfismo dos objetos em Python.
 
 """
 
