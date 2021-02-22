@@ -36,7 +36,95 @@ os 3 valores sendo inicializados por valores passados como parâmetros
 12) Na classe TestaPessoa instancie um objeto usando o segundo construtor (com
 os 3 parâmetros).
 
-13) Exiba os dados do objeto que foi instanciado na questão anteiror por
+13) Exiba os dados do objeto que foi instanciado na questão anterior por
 meio do método exibe() sem argumentos
 
 """
+
+class Pessoa:
+
+    def __init__(self):
+        print("\nConstrutor padrão")
+        self.__codigo = 0
+        self.__nome = "Sem nome"
+        self.__idade = 0
+
+    @property
+    def codigo(self):
+        return self.__codigo
+
+    @property
+    def nome(self):
+        return self.__nome
+
+    @property
+    def idade(self):
+        return self.__idade
+
+    @codigo.setter
+    def codigo(self, novo_valor):
+        try:
+            if type(novo_valor) != bool:
+                if int(novo_valor) >= 1:
+                    self.__codigo = int(novo_valor)
+                else:
+                    raise ValueError
+            else:
+                raise ValueError
+        except ValueError:
+            print("\nCódigo inválido.")
+
+    @nome.setter
+    def nome(self, novo_valor):
+        try:
+            if type(novo_valor) == str:
+                self.__nome = novo_valor
+            else:
+                raise ValueError
+        except ValueError:
+            print("\nNome inválido.")
+
+    @idade.setter
+    def idade(self, novo_valor):
+        try:
+            if type(novo_valor) != bool:
+                if int(novo_valor) >= 0:
+                    self.__idade = int(novo_valor)
+                else:
+                    raise ValueError
+            else:
+                raise ValueError
+        except ValueError:
+            print("\nIdade inválido")
+
+    def exibe(self, valor=1):
+        print(f"\nCódigo: {self.__codigo}")
+        print(f"Nome: {self.__nome}")
+        if valor == 1:
+            print(f"Idade: {self.__idade}")
+
+
+class TestaPessoa:
+
+    def __init__(self, codigo=1, nome="Charles", idade=45):
+
+        pessoa1 = Pessoa()
+        pessoa1.codigo = codigo
+        pessoa1.nome = nome
+        pessoa1.idade = idade
+
+        pessoa1.exibe()
+        pessoa1.exibe(1)
+        pessoa1.exibe(2)
+
+
+if __name__ == "__main__":
+    pessoa1 = Pessoa()
+
+    pessoa1.codigo = 56
+    pessoa1.nome = "Freddy"
+    pessoa1.idade = 20
+
+    pessoa1.exibe()
+    teste1 = TestaPessoa()
+    teste2 = TestaPessoa(2, "Logan", 38)
