@@ -41,10 +41,10 @@ meio do método exibe() sem argumentos
 
 """
 
+
 class Pessoa:
 
     def __init__(self):
-        print("\nConstrutor padrão")
         self.__codigo = 0
         self.__nome = "Sem nome"
         self.__idade = 0
